@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+const adminData = require('./admin');
+
+/* GET product list */
 router.get('/', (req, res, next) => {
-  res.send('respond with a resource');
+    res.send(adminData.products);
 });
 
 module.exports = router;
